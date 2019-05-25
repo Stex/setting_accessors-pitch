@@ -313,7 +313,7 @@ record.a_boolean = 'moin' #=> true
 
 ![](assets/images/travis-appraisal.png)
 
-----
+---
 
 #### Testing the "stable" AR API
 
