@@ -28,33 +28,15 @@ change_table :users do |t|
 end
 ```
 
-@snap[south-west span-50]
-
-
-
-@snapend
-
 ---
 
 @snap[west span-50]
 ![](assets/images/user-list.png)´
 @snapend
 
-@snap[south-west span-50]
-
-```ruby
-change_table :users do |t|
-  t.integer :users_per_page, default: 10
-end
-```
-
-@snapend
-
 @snap[east span-50]
 ![](assets/images/posts-list.png)´
 @snapend
-
-@snap[south-east span-50]
 
 ```ruby
 change_table :users do |t|
@@ -62,6 +44,3 @@ change_table :users do |t|
   t.integer :posts_per_page, default: 30
 end
 ```
-
-@snapend
-
