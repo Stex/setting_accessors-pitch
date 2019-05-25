@@ -105,16 +105,16 @@ Experimental or Temporary Features
 
 ---
 
-@snap[west span-50]
+@snap[north-west span-50]
 ![](assets/images/manager1.png)
 @snapend
 
-@snap[east span-50]
-> "We'd like to keep track of user invitations for an upcoming campaign"
+@snap[north-east span-50]
+"We'd like to keep track of user invitations for an upcoming campaign"
 @snapend
 
 @snap[south-west span-50]
-> "We want to test restricting available reactions (😀😢) for individual posts" 
+"We want to test restricting available reactions (😀😢) for individual posts" 
 @snapend
 
 @snap[south-east span-50]
