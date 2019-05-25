@@ -101,9 +101,9 @@ User.first.view_count_settings.find_by(name: :users)&.value ||
 
 ---
 
-![](assets/images/ThinccSpinner.gif)
+![](assets/images/spinthink.gif)
 
-Do I really want to pollute my database schema with that specific columns/tables?
+Do I really want to pollute my database schema with *that* specific columns/tables?
 
 ---
 
@@ -144,4 +144,4 @@ Why should I write migrations only to revert them a week later?
 ---
 
 In the end, I wanted to create something that would give me all of the previous
-solutions, but without actually having to change my database schema evey time.
+solutions, but without actually having to change my database schema every single time.
