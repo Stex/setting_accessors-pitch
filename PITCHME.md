@@ -214,3 +214,24 @@ def set_items_per_page
               assignable: current_user)
 end
 ```
+
+----
+
+#### ActiveRecord Integration
+
+```ruby
+class User < ApplicationRecord
+  setting_accessor :invited_users, type: :integer, default: 0
+end
+```
+
+```ruby
+class Post < ApplicationRecord
+  setting_accessor :allowed_reactions, type: :polymorphic, default: ALL_REACTIONS 
+end
+```
+
+```ruby
+User.first.update_attributes(invited_users: 5)
+Post.first.update_attributes(allowed_reactions: ['happy', 'sad'])
+```
