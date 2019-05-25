@@ -133,7 +133,7 @@ Do I really want to pollute my database schema with *that* specific columns/tabl
 
 ---
 
-**The same options again.**
+#### The same options again.
 
 * Add new columns to existing tables
 * Create new model + table
@@ -147,8 +147,22 @@ Why should I write migrations only to revert them a week later?
 
 ---
 
-**What I wanted**
+#### What I wanted
 
 * All of the previous solutions
 * Not having to create single-purpose tables/columns
 * Not having to change my database schema 
+
+---
+
+## `setting_accessors` and their usage
+
+---
+
+#### Global Key-Value-Store
+
+```ruby
+Setting.the_meaning_of_life = 42
+Setting.the_meaning_of_life
+#=> 42
+```
