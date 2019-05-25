@@ -105,9 +105,7 @@ Experimental or Temporary Features
 
 ---
 
-@snap[north-west span-50]
-![](assets/images/manager1.png)
-@snapend
+@img[fragment](assets/images/manager1.png)
 
 @snap[north-east span-50]
 "We need to keep track of user invitations for an upcoming campaign"
