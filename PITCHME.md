@@ -155,14 +155,25 @@ Why should I write migrations only to revert them a week later?
 
 ---
 
-## `setting_accessors` and their usage
+## `setting_accessors`
 
 ---
 
 #### Global Key-Value-Store
 
 ```ruby
-Setting.the_meaning_of_life = 42
-Setting.the_meaning_of_life
-#=> 42
+Setting.the_meaning_of_life ||= 42
+Setting.the_meaning_of_life #=> 42
 ```
+
+```ruby
+Setting[:meaning_of_life] ||= 42
+Setting[:meaning_of_life] #=> 42
+```
+
+```ruby
+Setting.set(:meaning_of_life, 42)
+Setting.get(:meaning_of_life) #=> 42
+```
+
+
