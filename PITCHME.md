@@ -133,7 +133,7 @@ Do I really want to pollute my database schema with *that* specific columns/tabl
 
 ---
 
-### The same options again.
+**The same options again.**
 
 * Add new columns to existing tables
 * Create new model + table
@@ -147,7 +147,7 @@ Why should I write migrations only to revert them a week later?
 
 ---
 
-What I wanted:
+**What I wanted**
 
 * All of the previous solutions
 * Not to change my database schema every time
