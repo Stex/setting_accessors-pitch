@@ -131,6 +131,6 @@ Experimental or Temporary Features
 
 ---
 
-# ![](assets/images/ThonkSpin.gif)
+![](assets/images/ThonkSpin.gif)
 
 @fa[arrow-right](Many migrations, a lot of them to be reverted later)
