@@ -15,12 +15,14 @@
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
+* The current meaning of meaning of life, the universe and everything
 
 ---
 
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
+* The current meaning of meaning of life, the universe and everything
 
 ```ruby
 create_table :application_settings do |t|
@@ -175,5 +177,9 @@ Setting[:meaning_of_life] #=> 42
 Setting.set(:meaning_of_life, 42)
 Setting.get(:meaning_of_life) #=> 42
 ```
+
+---
+
+#### Assigned Records
 
 
