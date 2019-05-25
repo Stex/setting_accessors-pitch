@@ -64,7 +64,8 @@ class User < ApplicationRecord
   serialize :view_settings
 end
 
-User.first.view_settings.try(:[], :users) || User::DEFAULTS[:users]
+User.first.view_settings.try(:[], :users) || 
+  User::DEFAULTS[:users]
 ```
 
 ---
@@ -72,12 +73,29 @@ User.first.view_settings.try(:[], :users) || User::DEFAULTS[:users]
 ![](assets/images/sa-lists.png)
 
 ```ruby
+class ViewCountSetting < ApplicationRecord
+end
+
 class User < ApplicationRecord
   DEFAULTS = {users: 10, posts: 30}
 
-  has_many :view_settings
+  has_many :view_count_settings
 end
 
-User.first.view_settings.find_by(name: :users)&.value || 
+User.first.view_count_settings.find_by(name: :users)&.value || 
   User::DEFAULTS[:users]
 ```
+
+---
+
+Experimental or Temporary Features
+
+---
+
+Usually same options:
+
+* Add new columns to existing tables
+* Create new model + table
+* Start serializing
+
+@fa[arrow-right](A lot of migrations for functionality that might as well get removed soon)
