@@ -311,7 +311,9 @@ record.a_boolean = 'moin' #=> true
 
 ---
 
+@snap[north heading span-100]
 #### Appraisal
+@snapend
 
 @snap[west span-70]
 * Run specs against multiple version of the same gem
