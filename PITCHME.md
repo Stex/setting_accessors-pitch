@@ -62,10 +62,11 @@ change_table :users do |t|
 end
 
 class User < ApplicationRecord
+  DEFAULTS = {users: 10, posts: 30}
+
   serialize :view_settings
 end
 
 u = User.first
-u.view_settings ||= {}
-u.view_settings[:users] = 30
+u.view_settings.try(:[], :users) || User::DEFAULTS[:users]
 ```
