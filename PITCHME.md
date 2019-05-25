@@ -2,9 +2,13 @@
 
 ---
 
+## Reoccurring Problems
+
+---
+
 @title[Application-Wide Settings]
 
-Application-Wide Settings
+1. Application-Wide Settings
 
 ---
 
@@ -32,7 +36,7 @@ ApplicationSetting.create(name: 'contact_email',
 
 @title[User-Specific Settings]
 
-User-Specific Settings
+2. User-Specific Settings
 
 ---
 
@@ -107,7 +111,7 @@ Do I really want to pollute my database schema with *that* specific columns/tabl
 
 ---
 
-Experimental or Temporary Features
+3. Experimental or Temporary Features
 
 ---
 
