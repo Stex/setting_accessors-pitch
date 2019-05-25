@@ -133,4 +133,4 @@ Experimental or Temporary Features
 
 ![](assets/images/ThonkSpin.gif)
 
-@fa[arrow-right](Many migrations, a lot of them to be reverted later)
+I'm writing migrations only to revert them a week later
