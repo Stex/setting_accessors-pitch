@@ -229,11 +229,9 @@ end
 
 ```ruby
 class Post < ApplicationRecord
-  ALL_REACTIONS = ['happy', 'sad', 'thinking']
-  
   setting_accessor :allowed_reactions, 
                    type:    :polymorphic, 
-                   default: ALL_REACTIONS 
+                   default: ['happy', 'sad', 'thinking'] 
 end
 ```
 
