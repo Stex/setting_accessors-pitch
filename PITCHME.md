@@ -2,17 +2,28 @@
 
 ---
 
-## Application-wide Settings
+@title[Application-Wide Settings]
 
-Should be changeable without having to deploy:
+Application-Wide Settings
+
+---
+
+Certain values which should be changeable without having to deploy:
 
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
 
+```ruby
+create_table :application_settings do |t|
+  t.string :name, null: false
+  t.string :value, null: false
+end
+```
+
 ---
 
-@title[User Specific Settings]
+@title[User-Specific Settings]
 
 How about user specific settings?
 
