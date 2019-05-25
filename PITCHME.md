@@ -23,11 +23,13 @@ How about user specific settings?
 @snapend
 
 @snap[south-west span-50]
+
 ```ruby
 change_table :users do |t|
   t.integer :users_per_page, default: 10
 end
 ```
+
 @snapend
 
 ---
@@ -37,11 +39,13 @@ end
 @snapend
 
 @snap[south-west span-50]
+
 ```ruby
 change_table :users do |t|
   t.integer :users_per_page, default: 10
 end
 ```
+
 @snapend
 
 @snap[east span-50]
@@ -49,11 +53,13 @@ end
 @snapend
 
 @snap[south-east span-50]
+
 ```ruby
 change_table :users do |t|
   t.integer :users_per_page, default: 10
   t.integer :posts_per_page, default: 30
 end
 ```
+
 @snapend
 
