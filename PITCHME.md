@@ -101,6 +101,12 @@ User.first.view_count_settings.find_by(name: :users)&.value ||
 
 ---
 
+![](assets/images/ThinccSpinner.gif)
+
+Do I really have to pollute my database schema that much?
+
+---
+
 Experimental or Temporary Features
 
 ---
@@ -133,4 +139,7 @@ Experimental or Temporary Features
 
 ![](assets/images/ThonkSpin.gif)
 
-I'm writing migrations only to revert them a week later
+Why should I write migrations only to revert them a week later?
+
+---
+
