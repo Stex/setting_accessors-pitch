@@ -292,3 +292,7 @@ u.invited_users_before_type_cast #=> '5'
 u.reload
 u.changed? #=> false
 ```
+
+## Keeping up with ActiveRecord
+
+`setting_accessor`s have to behave exactly like normal attributes in different version of ActiveRecord
