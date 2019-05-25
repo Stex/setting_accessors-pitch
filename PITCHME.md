@@ -215,7 +215,7 @@ def set_items_per_page
 end
 ```
 
-----
+---
 
 #### ActiveRecord Integration
 
