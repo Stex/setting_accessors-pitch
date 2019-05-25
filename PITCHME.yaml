@@ -1,3 +1,5 @@
 theme: night
 transition: none
 highlight: railscasts
+theme-override : assets/css/PITCHME.css
+
