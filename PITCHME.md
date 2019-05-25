@@ -336,4 +336,4 @@ compared to the actual AR behaviour.
 
 ---
 
-@code[ruby code-blend code-max](assets/src/integer_converter_spec.rb)
+@code[ruby code-blend code-max](assets/src/boolean_converter_spec.rb)
