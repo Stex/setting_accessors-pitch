@@ -18,7 +18,8 @@ create_table :application_settings do |t|
   t.string :value, null: false
 end
 
-ApplicationSetting.create(name: 'contact_email', value: 'ulf@example.com')
+ApplicationSetting.create(name: 'contact_email', 
+                          value: 'ulf@example.com')
 ```
 
 ---
@@ -94,11 +95,13 @@ Experimental or Temporary Features
 
 > We'd like to keep track of user invitations for an upcoming campaign
 
-> Let's try to restrict available reactions (😀☹️) for individual posts 
+or 
+
+> Let's try to restrict available reactions (😀) for individual posts 
 
 ---
 
-### Usually: The same options again.
+### The same options again.
 
 * Add new columns to existing tables
 * Create new model + table
