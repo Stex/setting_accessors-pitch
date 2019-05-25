@@ -32,7 +32,7 @@ ApplicationSetting.create(name: 'contact_email',
 
 @title[User-Specific Settings]
 
-How about user specific settings?
+User-Specific Settings
 
 ---
 
@@ -131,6 +131,6 @@ Experimental or Temporary Features
 
 ---
 
-# 🤔
+# ![](assets/images/ThonkSpin.gif)
 
-@fa[arrow-right](Many migrations, many of of them to be reverted later)
+@fa[arrow-right](Many migrations, a lot of them to be reverted later)
