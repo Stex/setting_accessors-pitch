@@ -18,22 +18,17 @@ How about user specific settings?
 
 ---
 
-@snap[west span-50]
-![](assets/images/user-list.png)´
-@snapend
+![](assets/images/user-list.png)
 
-@snap[south span-100]
 ```ruby
 change_table :users do |t|
   t.integer :users_per_page, default: 10
 end
 ```
-@snapend
 
 ---
 
-![](assets/images/user-list.png)´
-![](assets/images/posts-list.png)´
+![](assets/images/sa-lists.png)
 
 ```ruby
 change_table :users do |t|
