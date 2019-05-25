@@ -334,6 +334,6 @@ end
 Implementations for e.g. type casts might change over time and therefore have to be
 compared to the actual AR behaviour.
 
-+++
+---
 
-@code[ruby](assets/src/integer_converter_spec.rb)
+@code[ruby code-blend code-max](assets/src/integer_converter_spec.rb)
