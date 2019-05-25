@@ -103,7 +103,7 @@ User.first.view_count_settings.find_by(name: :users)&.value ||
 
 ![](assets/images/ThinccSpinner.gif)
 
-Do I really have to pollute my database schema that much?
+Do I really want to pollute my database schema like this?
 
 ---
 
@@ -143,3 +143,5 @@ Why should I write migrations only to revert them a week later?
 
 ---
 
+In the end, I wanted to create something that would give me all of the previous
+solutions, but without actually having to change my database schema evey time.
