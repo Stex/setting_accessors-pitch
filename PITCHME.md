@@ -214,6 +214,12 @@ end
 
 ---
 
+![](assets/images/parrot.gif)
+
+Application-wide and user-specific settings are covered!
+
+---
+
 #### Virtual Attributes
 
 ```ruby
@@ -249,12 +255,6 @@ p.save
 
 ---
 
-![](assets/images/parrot.gif)
-
-And now for the most interesting part
-
----
-
 #### Virtual Attributes
 
 **Validations**
@@ -267,6 +267,8 @@ class User < ApplicationRecord
             numericality: {less_than_or_equal_to: 100}
 end
 ```
+
+Just treat the accessor as a normal attribute.
 
 ---
 
