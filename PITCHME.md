@@ -349,3 +349,9 @@ compared to the actual AR behaviour.
 ---
 
 @code[ruby code-blend code-max](assets/src/boolean_converter_spec.rb)
+
+---
+
+![](assets/images/qrcode.jpeg)
+
+@fa[github gp-contact](`stex/setting_accessors`)

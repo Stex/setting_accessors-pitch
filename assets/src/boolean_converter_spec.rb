@@ -3,6 +3,8 @@
 describe SettingAccessors::Converters::BooleanConverter do
   subject { described_class }
 
+  # Creates a temporary model to test on.
+  # Removes the need of a "dummy" rails application
   with_model 'TestModel' do
     table do |t|
       t.boolean :boolean_attribute
