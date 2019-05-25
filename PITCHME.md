@@ -195,6 +195,8 @@ Setting.the_meaning_of_life(universe) #=> 43
 
 ---
 
+#### Assigned Records
+
 ```ruby
 def action_key
   [controller_path, action_name].join('_')
@@ -227,11 +229,21 @@ end
 
 ```ruby
 class Post < ApplicationRecord
-  setting_accessor :allowed_reactions, type: :polymorphic, default: ALL_REACTIONS 
+  ALL_REACTIONS = ['happy', 'sad', 'thinking']
+  
+  setting_accessor :allowed_reactions, 
+                   type:    :polymorphic, 
+                   default: ALL_REACTIONS 
 end
 ```
 
 ```ruby
-User.first.update_attributes(invited_users: 5)
-Post.first.update_attributes(allowed_reactions: ['happy', 'sad'])
+u = User.first
+u.invited_users #=> 0
+u.update_attributes(invited_users: 1)
+
+p = Post.first
+p.allowed_reactions #=> ['happy', 'sad', 'thinking']
+p.allowed_reactions -= ['thinking']
+p.save
 ```
