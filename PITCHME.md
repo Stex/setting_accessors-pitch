@@ -147,5 +147,7 @@ Why should I write migrations only to revert them a week later?
 
 ---
 
-In the end, I wanted to create something that would give me all of the previous
-solutions, but without actually having to change my database schema every single time.
+What I wanted:
+
+* All of the previous solutions
+* Not to change my database schema every time
