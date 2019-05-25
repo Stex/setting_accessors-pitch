@@ -103,7 +103,7 @@ User.first.view_count_settings.find_by(name: :users)&.value ||
 
 ![](assets/images/ThinccSpinner.gif)
 
-Do I really want to pollute my database schema like this?
+Do I really want to pollute my database schema with that specific columns/tables?
 
 ---
 
