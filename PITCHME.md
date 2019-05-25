@@ -8,8 +8,6 @@ Application-Wide Settings
 
 ---
 
-Certain values which should be changeable without having to deploy:
-
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
@@ -19,6 +17,8 @@ create_table :application_settings do |t|
   t.string :name, null: false
   t.string :value, null: false
 end
+
+ApplicationSetting.create(name: 'contact_email', value: 'ulf@example.com')
 ```
 
 ---
@@ -46,4 +46,20 @@ change_table :users do |t|
   t.integer :users_per_page, default: 10
   t.integer :posts_per_page, default: 30
 end
+```
+
++++
+
+```ruby
+change_table :users do |t|
+  t.text :view_settings
+end
+
+class User < ApplicationRecord
+  serialize :view_settings
+end
+
+u = User.first
+u.view_settings ||= {}
+u.view_settings[:users] = 30
 ```
