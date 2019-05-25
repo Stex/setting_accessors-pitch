@@ -114,7 +114,7 @@ Experimental or Temporary Features
 @snapend
 
 @snap[south-west span-50]
-@box[bg-gold text-white rounded]("We want to test restricting allowed reactions (😀😢) for certain posts" )
+@box[bg-gold text-white rounded]("We want to test restricting allowed reactions for certain posts")
 @snapend
 
 @snap[south-east span-50]
@@ -131,6 +131,6 @@ Experimental or Temporary Features
 
 ---
 
-## 🤔
+# 🤔
 
-@fa[arrow-right](Many migrations, a lot of them to be reverted later)
+@fa[arrow-right](Many migrations, many of of them to be reverted later)
