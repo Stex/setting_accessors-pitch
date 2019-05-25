@@ -282,6 +282,7 @@ end
 ```ruby
 u = User.first
 u.invited_users = '5'
+u.invited_users #=> 5 (Already typecasted)
 
 u.changed? #=> true
 u.invited_users_changed? #=> true
