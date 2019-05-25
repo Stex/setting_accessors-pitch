@@ -255,7 +255,8 @@ p.save
 ---
 
 #### Virtual Attributes
-##### Validations
+
+**Validations**
 
 ```ruby
 class User < ApplicationRecord
@@ -264,4 +265,29 @@ class User < ApplicationRecord
   validates :invited_users,
             numericality: {less_than_or_equal_to: 100}
 end
+```
+
+---
+
+#### Virtual Attributes
+
+**Helper Methods**
+
+```ruby
+class User < ApplicationRecord
+  setting_accessor :invited_users, type: :integer, default: 0
+end
+```
+
+```ruby
+u = User.first
+u.invited_users = '5'
+
+u.changed? #=> true
+u.invited_users_changed? #=> true
+u.invited_users_was #=> 0
+u.invited_users_before_type_cast #=> '5'
+
+u.reload
+u.changed? #=> false
 ```
