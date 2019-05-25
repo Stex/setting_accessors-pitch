@@ -311,15 +311,9 @@ record.a_boolean = 'moin' #=> true
 
 ---
 
-@snap[north heading span-100]
 #### Appraisal
-@snapend
 
-@snap[west span-70]
 * Run specs against multiple version of the same gem
 * Automatic integration in e.g. TravisCI
-@snapend
 
-@snap[east span-30]
 ![](assets/images/appraisal.png)
-@snapend
