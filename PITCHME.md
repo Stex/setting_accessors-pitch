@@ -327,7 +327,7 @@ it 'marks the record as changed when a new value is assigned' do
 end
 ```
 
-----
+---
 
 #### Testing the less stable part
 
