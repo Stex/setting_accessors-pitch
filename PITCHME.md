@@ -105,14 +105,16 @@ Experimental or Temporary Features
 
 ---
 
+@snap[north-west span-50]
 @img[fragment](assets/images/manager1.png)
+@snapend
 
 @snap[north-east span-50]
-"We need to keep track of user invitations for an upcoming campaign"
+@box[fragment]("We need to keep track of user invitations for an upcoming campaign")
 @snapend
 
 @snap[south-west span-50]
-"We want to test restricting allowed reactions (😀😢) for certain posts" 
+@box[fragment]("We want to test restricting allowed reactions (😀😢) for certain posts" )
 @snapend
 
 @snap[south-east span-50]
