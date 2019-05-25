@@ -299,9 +299,8 @@ u.changed? #=> false
 
 ---
 
-ActiveRecord changes its implementation of certain features from time to time.
-
-Example: Assigning a non-boolean value to a boolean attribute:
+* ActiveRecord changes its implementation of certain features from time to time.
+* Example: Assigning a non-boolean value to a boolean attribute:
 
 ```ruby
 # Rails 4.2
