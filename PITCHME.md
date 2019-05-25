@@ -268,8 +268,6 @@ class User < ApplicationRecord
 end
 ```
 
-Just treat the accessor as a normal attribute.
-
 ---
 
 #### Virtual Attributes
@@ -295,6 +293,12 @@ u.invited_users_before_type_cast #=> '5'
 u.reload
 u.changed? #=> false
 ```
+
+---
+
+![](assets/images/dogeparrot.gif)
+
+Table columns for experimental / temporary features are covered!
 
 ---
 
