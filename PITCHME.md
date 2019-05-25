@@ -110,11 +110,11 @@ Experimental or Temporary Features
 @snapend
 
 @snap[north-east span-50]
-"We'd like to keep track of user invitations for an upcoming campaign"
+"We need to keep track of user invitations for an upcoming campaign"
 @snapend
 
 @snap[south-west span-50]
-"We want to test restricting available reactions (😀😢) for individual posts" 
+"We want to test restricting allowed reactions (😀😢) for certain posts" 
 @snapend
 
 @snap[south-east span-50]
