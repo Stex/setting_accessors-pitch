@@ -14,8 +14,7 @@ Should be changeable without having to deploy:
 
 ## User-specific Settings
 
-Example: "How many items would you like to see in the user list?"
-
+@snap[west span-50]
 ![](assets/images/user-list.png)´
 
 ```ruby
@@ -23,8 +22,30 @@ change_table :users do |t|
   t.integer :users_per_page, default: 10
 end
 ```
+@snapend
 
 ---
 
+## User-specific Settings
+
+@snap[west span-50]
+![](assets/images/user-list.png)´
+
+```ruby
+change_table :users do |t|
+  t.integer :users_per_page, default: 10
+end
+```
+@snapend
+
+@snap[east span-50]
 ![](assets/images/posts-list.png)´
+
+```ruby
+change_table :users do |t|
+  t.integer :users_per_page, default: 10
+  t.integer :posts_per_page, default: 30
+end
+```
+@snapend
 
