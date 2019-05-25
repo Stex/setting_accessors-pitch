@@ -183,9 +183,6 @@ Setting.get(:meaning_of_life) #=> 42
 #### Assigned Records
 
 ```ruby
-Setting.the_meaning_of_life = 42
-Setting.the_meaning_of_life #=> 42
-
 universe = Universe.first
 Setting.set(:meaning_of_life, 43, assignable: universe)
 Setting.get(:the_meaning_of_life, universe) #=> 43
@@ -194,4 +191,26 @@ Setting.get(:the_meaning_of_life, universe) #=> 43
 ```ruby
 Setting[:the_meaning_of_life, universe] = 43
 Setting.the_meaning_of_life(universe) #=> 43
+```
+
+---
+
+```ruby
+def action_key
+  [controller_path, action_name].join('_')
+end
+```
+
+```ruby
+def items_per_page
+  Setting.get(action_key, current_user) || 30
+end
+```
+
+```ruby
+def set_items_per_page
+  Setting.set(action_key, 
+              params[:per_page], 
+              assignable: current_user)
+end
 ```
