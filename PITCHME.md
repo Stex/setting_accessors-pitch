@@ -31,6 +31,10 @@ How about user specific settings?
 
 ![](assets/images/user-list.png)
 
+---
+
+![](assets/images/user-list.png)
+
 ```ruby
 change_table :users do |t|
   t.integer :users_per_page, default: 10
@@ -48,7 +52,9 @@ change_table :users do |t|
 end
 ```
 
-+++
+---
+
+![](assets/images/sa-lists.png)
 
 ```ruby
 change_table :users do |t|
