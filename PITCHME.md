@@ -92,10 +92,14 @@ Experimental or Temporary Features
 
 ---
 
-Usually same options:
+> We'd like to keep track of user invitations for an upcoming campaign
+
+> Let's try to restrict available reactions (😀☹️) for individual posts 
+
+---
+
+### Usually: The same options again.
 
 * Add new columns to existing tables
 * Create new model + table
 * Start serializing
-
-@fa[arrow-right](A lot of migrations for functionality that might as well get removed soon)
