@@ -293,6 +293,20 @@ u.reload
 u.changed? #=> false
 ```
 
+---
+
 ## Keeping up with ActiveRecord
 
-`setting_accessor`s have to behave exactly like normal attributes in different version of ActiveRecord
+---
+
+ActiveRecord changes its implementation of certain features from time to time.
+
+Example: Assigning a non-boolean value to a boolean attribute:
+
+```ruby
+# Rails 4.2
+record.a_boolean = 'moin' #=> false
+
+# Rails 5
+record.a_boolean = 'moin' #=> true
+```
