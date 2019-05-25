@@ -228,6 +228,16 @@ end
 ```
 
 ```ruby
+u = User.first
+u.invited_users #=> 0
+u.update_attributes(invited_users: 1)
+```
+
+---
+
+#### ActiveRecord Integration
+
+```ruby
 class Post < ApplicationRecord
   setting_accessor :allowed_reactions, 
                    type:    :polymorphic, 
@@ -236,10 +246,6 @@ end
 ```
 
 ```ruby
-u = User.first
-u.invited_users #=> 0
-u.update_attributes(invited_users: 1)
-
 p = Post.first
 p.allowed_reactions #=> ['happy', 'sad', 'thinking']
 p.allowed_reactions -= ['thinking']
