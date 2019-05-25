@@ -8,9 +8,23 @@ Application-Wide Settings
 
 ---
 
+@ul
+
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
+
+@ulend
+
+---
+
+@ul
+
+* Application Name
+* Contact Email
+* Google Place ID for map on contact page
+
+@ulend
 
 ```ruby
 create_table :application_settings do |t|
