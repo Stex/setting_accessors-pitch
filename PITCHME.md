@@ -32,13 +32,8 @@ end
 
 ---
 
-@snap[west span-50]
 ![](assets/images/user-list.png)´
-@snapend
-
-@snap[east span-50]
 ![](assets/images/posts-list.png)´
-@snapend
 
 ```ruby
 change_table :users do |t|
