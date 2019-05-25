@@ -299,8 +299,7 @@ u.changed? #=> false
 
 ---
 
-* ActiveRecord changes its implementation of certain features from time to time.
-* Example: Assigning a non-boolean value to a boolean attribute:
+Assigning a non-boolean value to a boolean attribute:
 
 ```ruby
 # Rails 4.2
@@ -309,3 +308,16 @@ record.a_boolean = 'moin' #=> false
 # Rails 5
 record.a_boolean = 'moin' #=> true
 ```
+
+---
+
+#### Appraisal
+
+@snap[west span-70]
+* Run specs against multiple version of the same gem
+* Automatic integration in e.g. TravisCI
+@snapend
+
+@snap[east span-30]
+![](assets/images/appraisal.png)
+@snapend
