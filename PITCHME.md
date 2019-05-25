@@ -312,3 +312,45 @@ record.a_boolean = 'moin' #=> true
 * Automatic integration in e.g. TravisCI
 
 ![](assets/images/travis-appraisal.png)
+
+----
+
+#### Testing the "stable" AR API
+
+Generic behaviour like `#changed?` is not likely to change,
+only its underlying implementation.
+
+```ruby
+it 'marks the record as changed when a new value is assigned' do
+  record.my_setting = 'moin'
+  expect(record).to be_changed
+end
+```
+
+----
+
+#### Testing the less stable part
+
+Implementations for e.g. type casts might change over time and therefore have to be
+compared to the actual AR behaviour.
+
++++
+
+```ruby
+describe SettingAccessors::Converters::IntegerConverter do
+  subject { described_class }
+
+  with_model 'TestModel' do
+    table do |t|
+      t.integer :integer_attribute
+    end
+  end
+
+  it { is_expected.to convert(1).similar_to(TestModel.new).on(:integer_attribute) }
+  it { is_expected.to convert(1.0).similar_to(TestModel.new).on(:integer_attribute) }
+  it { is_expected.to convert('Oiski').similar_to(TestModel.new).on(:integer_attribute) }
+  it { is_expected.to convert(true).similar_to(TestModel.new).on(:integer_attribute) }
+  it { is_expected.to convert(false).similar_to(TestModel.new).on(:integer_attribute) }
+  it { is_expected.to convert(nil).similar_to(TestModel.new).on(:integer_attribute) }
+end
+```
