@@ -219,7 +219,7 @@ end
 
 ---
 
-#### ActiveRecord Integration
+#### Virtual Attributes
 
 ```ruby
 class User < ApplicationRecord
@@ -235,7 +235,7 @@ u.update_attributes(invited_users: 1)
 
 ---
 
-#### ActiveRecord Integration
+#### Virtual Attributes
 
 ```ruby
 class Post < ApplicationRecord
@@ -250,4 +250,18 @@ p = Post.first
 p.allowed_reactions #=> ['happy', 'sad', 'thinking']
 p.allowed_reactions -= ['thinking']
 p.save
+```
+
+---
+
+#### Virtual Attributes
+##### Validations
+
+```ruby
+class User < ApplicationRecord
+  setting_accessor :invited_users, type: :integer, default: 0
+  
+  validates :invited_users,
+            numericality: {less_than_or_equal_to: 100}
+end
 ```
