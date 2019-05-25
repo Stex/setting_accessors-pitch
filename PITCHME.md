@@ -249,6 +249,12 @@ p.save
 
 ---
 
+![](assets/images/parrot.gif)
+
+And now for the most interesting part
+
+---
+
 #### Virtual Attributes
 
 **Validations**
