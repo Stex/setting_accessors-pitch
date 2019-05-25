@@ -8,23 +8,15 @@ Application-Wide Settings
 
 ---
 
-@ul
-
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
-
-@ulend
 
 ---
 
-@ul
-
 * Application Name
 * Contact Email
 * Google Place ID for map on contact page
-
-@ulend
 
 ```ruby
 create_table :application_settings do |t|
@@ -78,7 +70,9 @@ class User < ApplicationRecord
   # t.text :view_settings
   serialize :view_settings
 end
+```
 
+```ruby
 User.first.view_settings.try(:[], :users) || 
   User::DEFAULTS[:users]
 ```
@@ -90,13 +84,17 @@ User.first.view_settings.try(:[], :users) ||
 ```ruby
 class ViewCountSetting < ApplicationRecord
 end
+```
 
+```ruby
 class User < ApplicationRecord
   DEFAULTS = {users: 10, posts: 30}
 
   has_many :view_count_settings
 end
+```
 
+```ruby
 User.first.view_count_settings.find_by(name: :users)&.value || 
   User::DEFAULTS[:users]
 ```
@@ -107,11 +105,11 @@ Experimental or Temporary Features
 
 ---
 
-> We'd like to keep track of user invitations for an upcoming campaign
+> "We'd like to keep track of user invitations for an upcoming campaign"
 
 or 
 
-> Let's try to restrict available reactions (😀) for individual posts 
+> "Let's try to restrict available reactions (😀😢) for individual posts" 
 
 ---
 
@@ -120,3 +118,9 @@ or
 * Add new columns to existing tables
 * Create new model + table
 * Start serializing
+
+---
+
+## 🤔
+
+@fa[arrow-right](Many migrations, a lot of them to be reverted later)
