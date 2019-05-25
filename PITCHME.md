@@ -150,5 +150,5 @@ Why should I write migrations only to revert them a week later?
 **What I wanted**
 
 * All of the previous solutions
-* Not having to create single-purpose tables or lots of columns
-* Not having to change my database schema every time
+* Not having to create single-purpose tables/columns
+* Not having to change my database schema 
