@@ -70,3 +70,25 @@ end
 u = User.first
 u.view_settings.try(:[], :users) || User::DEFAULTS[:users]
 ```
+
+---
+
+---
+
+![](assets/images/sa-lists.png)
+
+```ruby
+create_table :view_settings do |t|
+  t.string :view_name, null: false
+  t.integer :value, null: false
+end
+
+class User < ApplicationRecord
+  DEFAULTS = {users: 10, posts: 30}
+
+  has_many :view_settings
+end
+
+u = User.first
+u.view_settings.find_by(name: :users)&.value || User::DEFAULTS[:users]
+```
