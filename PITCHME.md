@@ -19,11 +19,6 @@
 
 ---
 
-* Application Name
-* Contact Email
-* Google Place ID for map on contact page
-* The current meaning of meaning of life, the universe and everything
-
 ```ruby
 create_table :application_settings do |t|
   t.string :name, null: false
@@ -316,4 +311,4 @@ record.a_boolean = 'moin' #=> true
 * Run specs against multiple version of the same gem
 * Automatic integration in e.g. TravisCI
 
-![](assets/images/appraisal.png)
+![](assets/images/travis-appraisal.png)
