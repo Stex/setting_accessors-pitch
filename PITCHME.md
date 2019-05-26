@@ -352,6 +352,10 @@ compared to the actual AR behaviour.
 
 ---
 
+## Questions?
+
+---
+
 ![](assets/images/qrcode.jpeg)
 
 @fa[github gp-contact](`stex/setting_accessors`)
