@@ -158,6 +158,30 @@ within a week.
 
 ---
 
+We should need only one table which acts as a key value store...
+
+```ruby
+create_table :settings do |t|
+  t.string :name, null: false
+  t.string :value, null: false
+end
+```
+
+---
+
+...and to make it more personal, we allow assigning these values to existing
+records in our application
+
+```ruby
+create_table :settings do |t|
+  t.string :name, null: false
+  t.string :value, null: false
+  t.belongs_to :assignable, polymorphic: true
+end
+```
+
+---
+
 ## `setting_accessors`
 
 ---
