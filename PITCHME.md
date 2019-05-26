@@ -153,7 +153,7 @@ Why should I write migrations only to revert them a week later?
 In the end, the previously solutions are not bad.
 
 I just don't want to change my database schema all the time for
-multiple versions of the same thing of features that are gone again
+multiple versions of the same thing or features that are gone again
 within a week. 
 
 ---
