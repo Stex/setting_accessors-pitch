@@ -144,11 +144,13 @@ Why should I write migrations only to revert them a week later?
 
 ---
 
-#### What I wanted
+#### So, what to do?
 
-* All of the previous solutions
-* Not having to create single-purpose tables/columns
-* Not having to change my database schema 
+In the end, the previously solutions are not bad.
+
+I just don't want to change my database schema all the time for
+multiple versions of the same thing of features that are gone again
+within a week. 
 
 ---
 
@@ -310,6 +312,18 @@ Assigning a non-boolean value to a boolean attribute:
 
 ```ruby
 # Rails 4.2
+record.a_boolean = 'moin'
+
+# Rails 5
+record.a_boolean = 'moin'
+```
+
+---
+
+Assigning a non-boolean value to a boolean attribute:
+
+```ruby
+# Rails 4.2
 record.a_boolean = 'moin' #=> false
 
 # Rails 5
@@ -329,8 +343,7 @@ record.a_boolean = 'moin' #=> true
 
 #### Testing the "stable" part of ActiveRecord
 
-Generic behaviour like `#changed?` is not likely to change,
-only its underlying implementation.
+The expected result of functions like `#changed?` is not likely to change.
 
 ```ruby
 it 'marks the record as changed when a new value is assigned' do
@@ -338,6 +351,19 @@ it 'marks the record as changed when a new value is assigned' do
   expect(record).to be_changed
 end
 ```
+
+---
+
+#### Testing the "stable" part of ActiveRecord
+
+However, the internal implementation might.
+
+```ruby
+it 'touches the record if one of its settings was changed' do
+  record.my_setting = 'moin'
+  expect { record.save }.to change { record.updated_at }
+end
+``` 
 
 ---
 
