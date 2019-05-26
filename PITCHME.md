@@ -1,3 +1,7 @@
+![](assets/images/notbutter.png)
+
+---
+
 # Settings and Virtual Attributes in Rails Applications
 
 ---
